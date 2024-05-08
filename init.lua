@@ -1,3 +1,3 @@
 require("config.lazy")
 
-vim.cmd([[colorscheme ayu]])
+vim.cmd([[colorscheme tokyonight-night]])
