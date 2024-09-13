@@ -2,4 +2,4 @@
 require("config.lazy")
 
 -- Set default colorscheme
-vim.cmd([[colorscheme nordfox]])
+vim.cmd.colorscheme("catppuccin-macchiato")
