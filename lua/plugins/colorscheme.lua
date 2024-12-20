@@ -15,6 +15,8 @@ return {
 	{ "ellisonleao/gruvbox.nvim" },
 	{ "EdenEast/nightfox.nvim" },
 	{ "rose-pine/neovim" },
-	{ "craftzdog/solarized-osaka.nvim" },
-	{ "ayu-theme/ayu-vim" },
+	{ "sainnhe/sonokai" },
+	{ "sainnhe/everforest" },
+	{ "sainnhe/gruvbox-material" },
+	{ "sainnhe/edge" },
 }
