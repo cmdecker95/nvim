@@ -2,4 +2,4 @@
 require("config.lazy")
 
 -- Set default colorscheme
-vim.cmd.colorscheme("everforest")
+vim.cmd.colorscheme("catppuccin")
