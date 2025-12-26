@@ -5,9 +5,6 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup()
-
-			-- setup must be called before loading
-			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
 	{ "folke/tokyonight.nvim" },
@@ -19,4 +16,5 @@ return {
 	{ "sainnhe/everforest" },
 	{ "sainnhe/gruvbox-material" },
 	{ "sainnhe/edge" },
+	{ "rebelot/kanagawa.nvim" },
 }
