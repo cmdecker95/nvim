@@ -8,3 +8,6 @@ foo.*
 data
 lazy-lock.json
 .DS_Store
+
+# GitHub Copilot Pack
+pack/github/
