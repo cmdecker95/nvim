@@ -1,6 +1,9 @@
 return {
 	"neovim/nvim-lspconfig",
 	opts = {
+		inlay_hints = {
+			enabled = false, -- turn off inlay hints
+		},
 		servers = {
 			lua_ls = {
 				settings = {
