@@ -1,15 +1,15 @@
--- Options are automatically loaded from this file before lazy.nvim startup.
--- LazyVim sets sensible defaults in lazyvim.config.options.
--- Anything here runs after and overrides them.
+-- Options are automatically loaded before lazy.nvim startup.
+-- LazyVim defaults: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 
-local opt = vim.opt
+-- Telescope as the LazyVim picker (auto-enables extras.editor.telescope).
+vim.g.lazyvim_picker = "telescope"
 
-opt.number = true -- show absolute line numbers
-opt.relativenumber = true -- show relative line numbers (great with motions)
-opt.scrolloff = 4 -- keep N lines visible above/below the cursor
-opt.wrap = false -- don't soft-wrap long lines
-opt.signcolumn = "yes" -- always show the sign column (no text shifting)
-opt.cursorline = true -- highlight the current line
-opt.termguicolors = true -- enable 24-bit colors
-opt.ignorecase = true -- case-insensitive search...
-opt.smartcase = true -- ...unless the query contains capitals
+-- Auto-completion off
+vim.g.ai_cmp = false
+
+-- Never conceal anything. LazyVim sets this to 2, which hands treesitter
+-- permission to hide the characters it has tagged as markup -- in markdown that
+-- means ``` fences, *emphasis* markers and [](link) syntax vanish. 0 is
+-- Neovim's own default and renders every buffer literally.
+-- <leader>uc toggles concealing back on for the current buffer if you want it.
+vim.opt.conceallevel = 0

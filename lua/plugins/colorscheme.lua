@@ -1,29 +1,19 @@
-local M = {
-	-- Colorscheme on startup (must be installed below)
-	colorscheme = "kanagawa-dragon",
-}
+local colorscheme = "catppuccin"
 
 return {
-	-- Tell LazyVim which colorscheme to load.
-	{ "LazyVim/LazyVim", opts = { colorscheme = M.colorscheme } },
-
-	-- Installed themes to pick from (set M.colorscheme above to switch).
+	{ "LazyVim/LazyVim", opts = { colorscheme = colorscheme } },
+	{ "rebelot/kanagawa.nvim", lazy = false, priority = 1000 },
+	{ "catppuccin/nvim", name = "catppuccin", lazy = false, priority = 1000 },
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
+		"neanias/everforest-nvim",
+		version = false,
+		lazy = false,
+		priority = 1000, -- make sure to load this before all the other start plugins
+		-- Optional; default configuration will be used if setup isn't called.
 		config = function()
-			require("catppuccin").setup()
+			require("everforest").setup({
+				-- Your config here
+			})
 		end,
 	},
-	{ "folke/tokyonight.nvim" },
-	{ "navarasu/onedark.nvim" },
-	{ "ellisonleao/gruvbox.nvim" },
-	{ "EdenEast/nightfox.nvim" },
-	{ "rose-pine/neovim" },
-	{ "sainnhe/sonokai" },
-	{ "sainnhe/everforest" },
-	{ "sainnhe/gruvbox-material" },
-	{ "sainnhe/edge" },
-	{ "rebelot/kanagawa.nvim" },
 }

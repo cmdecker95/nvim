@@ -1,2 +1,28 @@
--- Autocmds are automatically loaded from this file on the VeryLazy event.
--- LazyVim provides defaults in lazyvim.config.autocmds; add your own below.
+-- Autocmds are automatically loaded on the VeryLazy event.
+-- LazyVim defaults: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
+
+-- Disable auto-comment continuation
+vim.api.nvim_create_autocmd("FileType", {
+	callback = function()
+		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+	end,
+})
+
+-- Disable spellcheck
+vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- Annotate file types
+vim.filetype.add({
+	extension = { jsonl = "json" },
+	filename = {
+		["docker-compose.yml"] = "yaml.docker-compose",
+		["docker-compose.yaml"] = "yaml.docker-compose",
+		["compose.yml"] = "yaml.docker-compose",
+		["compose.yaml"] = "yaml.docker-compose",
+	},
+	pattern = {
+		[".*/templates/.*%.ya?ml"] = "helm",
+		[".*/templates/.*%.tpl"] = "helm",
+		["helmfile.*%.ya?ml"] = "helm",
+	},
+})
