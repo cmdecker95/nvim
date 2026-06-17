@@ -1,5 +1,10 @@
+local M = {
+	enabled = true, -- set false to disable seamless tmux <-> vim navigation
+}
+
 return {
 	"christoomey/vim-tmux-navigator",
+	enabled = M.enabled,
 	cmd = {
 		"TmuxNavigateLeft",
 		"TmuxNavigateDown",

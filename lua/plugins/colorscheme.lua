@@ -1,4 +1,13 @@
+local M = {
+	-- Colorscheme on startup (must be installed below)
+	colorscheme = "kanagawa-dragon",
+}
+
 return {
+	-- Tell LazyVim which colorscheme to load.
+	{ "LazyVim/LazyVim", opts = { colorscheme = M.colorscheme } },
+
+	-- Installed themes to pick from (set M.colorscheme above to switch).
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
