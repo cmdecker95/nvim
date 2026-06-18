@@ -1,7 +1,7 @@
 local M = {
 	-- Toggle default file visibility in picker and explorer
 	show_hidden = true, -- show dotfiles (e.g. .env, .gitignore)
-	show_ignored = false, -- also show .gitignore'd files (e.g. node_modules)
+	show_ignored = true, -- also show .gitignore'd files (e.g. node_modules)
 }
 
 return {
