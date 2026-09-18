@@ -1,6 +1,5 @@
--- Options are automatically loaded from this file before lazy.nvim startup.
--- LazyVim sets sensible defaults in lazyvim.config.options.
--- Anything here runs after and overrides them.
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 local opt = vim.opt
 

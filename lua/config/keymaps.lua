@@ -1,6 +1,3 @@
--- Keymaps are automatically loaded from this file on the VeryLazy event.
--- LazyVim provides defaults in lazyvim.config.keymaps; add your own below.
-
 local map = vim.keymap.set
 
 -- Keep cursor centered on half-page jumps
