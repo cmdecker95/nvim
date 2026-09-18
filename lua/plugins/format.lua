@@ -1,0 +1,31 @@
+return {
+	"stevearc/conform.nvim",
+	event = { "BufWritePre" },
+	cmd = { "ConformInfo" },
+	opts = {
+		notify_on_error = false,
+		format_on_save = {
+			timeout_ms = 1500,
+			lsp_format = "fallback",
+		},
+		formatters_by_ft = {
+			lua = { "stylua" },
+			python = { "ruff_fix", "ruff_format" },
+			javascript = { "prettier" },
+			javascriptreact = { "prettier" },
+			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
+			html = { "prettier" },
+			css = { "prettier" },
+			scss = { "prettier" },
+			json = { "prettier" },
+			jsonc = { "prettier" },
+			yaml = { "prettier" },
+			markdown = { "prettier" },
+			graphql = { "prettier" },
+			sh = { "shfmt" },
+			bash = { "shfmt" },
+			toml = { "taplo" },
+		},
+	},
+}
