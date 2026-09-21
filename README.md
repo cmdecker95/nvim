@@ -20,16 +20,3 @@ lua/
     lsp.lua              -- extra servers, inlay hints off
     tmux.lua
 ```
-
-## Updates
-
-LazyVim is pinned to the latest **stable tag** (`version = "*"`). The checker notifies when plugins or LazyVim are behind.
-
-- `:Lazy` — plugin UI
-- `:Lazy update` — apply updates (writes `lazy-lock.json`)
-- `:LazyExtras` — toggle extras
-- `<leader>L` — LazyVim changelog
-
-## Customizing
-
-Keep overlay files small. Prefer extras over copying LazyVim plugin specs. `lua/config/{options,keymaps,autocmds}.lua` load after LazyVim's defaults.

@@ -56,13 +56,13 @@ return {
 					return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 				end
 
-				api.config.mappings.default_on_attach(bufnr)
+				api.map.on_attach.default(bufnr)
 
 				vim.keymap.set("n", ".", function()
-					local node = api.tree.get_node_under_cursor()
-					if node and node.nodes then
-						api.tree.change_root_to_node(node)
-					end
+					-- local node = api.tree.get_node_under_cursor()
+					-- if node and node.nodes then
+					-- 	api.tree.change_root_to_node(node)
+					-- end
 				end, opts("CD"))
 
 				vim.keymap.set("n", "<BS>", api.tree.change_root_to_parent, opts("Up"))

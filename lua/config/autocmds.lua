@@ -8,6 +8,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- Annotate file types
 vim.filetype.add({
 	extension = { jsonl = "json" },
 	filename = {

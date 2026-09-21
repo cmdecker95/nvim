@@ -1,4 +1,4 @@
-local colorscheme = "kanagawa-dragon"
+local colorscheme = "catppuccin-nvim"
 
 return {
 	{ "LazyVim/LazyVim", opts = { colorscheme = colorscheme } },
