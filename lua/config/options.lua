@@ -4,8 +4,8 @@
 -- Telescope as the LazyVim picker (auto-enables extras.editor.telescope).
 vim.g.lazyvim_picker = "telescope"
 
--- Auto-completion
-vim.g.ai_cmp = true
+-- Auto-completion off
+vim.g.ai_cmp = false
 
 -- Never conceal anything. LazyVim sets this to 2, which hands treesitter
 -- permission to hide the characters it has tagged as markup -- in markdown that
