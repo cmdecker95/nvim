@@ -6,14 +6,15 @@ Personal config on [LazyVim](https://www.lazyvim.org/). Overlay only lives in `l
 
 ```
 init.lua                 -- require("config.lazy")
-lazyvim.json             -- extras (Telescope, Harpoon2, languages, prettier)
+lazyvim.json             -- extras (Copilot, Telescope, Harpoon2, languages, prettier)
 lua/
   config/
     lazy.lua             -- lazy.nvim + LazyVim import (version = "*")
-    options.lua          -- picker = telescope, no AI cmp
+    options.lua          -- picker = telescope, Copilot as ghost text
     keymaps.lua          -- extra maps on top of LazyVim
     autocmds.lua         -- extra autocmds on top of LazyVim
   plugins/               -- overrides / extra plugins
+    ai.lua               -- claudecode.nvim in a floating-claude window
     colorscheme.lua
     explorer.lua         -- nvim-tree in place of snacks explorer
     telescope.lua        -- <leader>ff = all files

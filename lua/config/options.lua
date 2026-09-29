@@ -4,5 +4,5 @@
 -- Telescope as the LazyVim picker (auto-enables extras.editor.telescope).
 vim.g.lazyvim_picker = "telescope"
 
--- No AI autocomplete
-vim.g.ai_cmp = false
+-- Auto-completion
+vim.g.ai_cmp = true
