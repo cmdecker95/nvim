@@ -8,6 +8,9 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+-- Disable spellcheck
+vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
 -- Annotate file types
 vim.filetype.add({
 	extension = { jsonl = "json" },
