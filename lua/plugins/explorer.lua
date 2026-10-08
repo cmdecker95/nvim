@@ -9,6 +9,14 @@ local function toggle_tree(dir)
 	})
 end
 
+local function current_file_dir()
+	local file = vim.api.nvim_buf_get_name(0)
+	if file == "" then
+		return LazyVim.root()
+	end
+	return vim.fn.fnamemodify(file, ":p:h")
+end
+
 return {
 	{
 		"folke/snacks.nvim",
@@ -33,9 +41,9 @@ return {
 			{
 				"<leader>fe",
 				function()
-					toggle_tree(LazyVim.root())
+					toggle_tree(current_file_dir())
 				end,
-				desc = "Explorer nvim-tree (Root Dir)",
+				desc = "Explorer nvim-tree (Current File Dir)",
 			},
 			{
 				"<leader>fE",
@@ -44,10 +52,11 @@ return {
 				end,
 				desc = "Explorer nvim-tree (cwd)",
 			},
-			{ "<leader>e", "<leader>fe", desc = "Explorer nvim-tree (Root Dir)", remap = true },
+			{ "<leader>e", "<leader>fe", desc = "Explorer nvim-tree (Current File Dir)", remap = true },
 			{ "<leader>E", "<leader>fE", desc = "Explorer nvim-tree (cwd)", remap = true },
 		},
 		opts = {
+			view = { width = 42 },
 			hijack_directories = { enable = false },
 			on_attach = function(bufnr)
 				local api = require("nvim-tree.api")
