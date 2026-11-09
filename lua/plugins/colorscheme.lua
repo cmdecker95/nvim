@@ -1,4 +1,4 @@
-local colorscheme = "everforest"
+local colorscheme = "catppuccin"
 
 return {
 	{ "LazyVim/LazyVim", opts = { colorscheme = colorscheme } },
